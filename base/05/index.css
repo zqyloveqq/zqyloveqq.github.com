@@ -1,0 +1,60 @@
+
+body{
+  padding: 30px;
+}
+section{
+  padding-left: 50px;
+  border: 3px solid #eeeeee;
+  margin-bottom: 20px;
+}
+section.screen-2{
+  padding: 0;
+  display: flex;
+}
+
+/*screen-2*/
+
+section.screen-2>h1{
+  background-color: #65a5fa;
+  color: white;
+  width: 11%;
+  margin: 0 30px 0 0;
+  font-size: 40px;
+  padding: 5% 0 0 5%;
+
+}
+
+/*screen-3*/
+.screen-3{
+  padding: 0;
+}
+.screen-3>h1{
+  margin: 0;
+  padding: 0;
+  height: 60px;
+
+}
+.screen-3>h1{
+  color: white;
+  padding-left: 30px;
+  line-height: 60px;
+  background-color: #858585;
+}
+div[class^='col']{
+  border: 1px solid #858585;
+  display: flex;
+}
+div[class^='col']>h2{
+  width: 150px;
+  margin: 0;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  border-bottom: 1px solid whitesmoke;
+  color: black;
+  background-color: #d6d6d6;
+}
+div[class^='col']>div{
+  padding: 10px 0 0 30px;
+  font-weight: bold;
+}
