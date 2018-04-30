@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+      .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo{
+        font-size: 60px;
+        margin: 80px 0;
+        position: relative;
+      }
+      .btn{
+        margin-top: 20px;
+        border: 2px solid #cccccc;
+        text-decoration: none;
+        color: orange;
+        background-color: #fff;
+        font-size: 40px;
+        padding: 5px;
+        border-radius:12px;
+        cursor: default;
+
+        box-shadow: 0 0 3px #cccccc;
+      }
+      .logo-blue{
+        color: blue;
+        transition: all 1s;
+      }
+      .logo-black{
+        color: black;
+        transition: all 1s;
+      }
+      .logo-blue::after{
+        animation: colorblue 1s linear forwards;
+        content: '';
+        position: absolute;
+        /*left: -16px;*/
+        /*bottom: -22px;*/
+        background-color: blue;
+        /*width: 280px;*/
+        height: 5px;
+        transition: all 1s;
+        color: blue;
+      }
+      .logo-black::after{
+        animation: colorblack 1s linear forwards;
+        content: '';
+        position: absolute;
+        background-color: black;
+        height: 5px;
+        transition: all 1s;
+      }
+      .btn-red{
+        color: red;
+      }
+      @keyframes colorblack {
+        0% {width: 280px;left: -16px;bottom: -22px;}
+        50%  {width: 140px;left: 74px;bottom: -22px;}
+        100%   {width:0;left: 132px;bottom: -22px;}
+      }
+
+      @keyframes colorblue {
+        0%   {width:0;left: 132px;bottom: -22px;}
+        50%  {width: 140px;left: 74px;bottom: -22px;}
+        100% {width: 280px;left: -16px;bottom: -22px;}
+      }
+    </style>
+  <script type="text/javascript">
+    window.onload = function (ev) {
+      var logo = document.getElementById('logo');
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function () {
+        if(logo.getAttribute('class') ==='logo' || logo.getAttribute('class') ==='logo logo-black'){
+          logo.setAttribute('class', 'logo logo-blue');
+          btn.setAttribute('class', 'btn btn-red')
+        }
+        else if(logo.getAttribute('class') ==='logo logo-blue') {
+          logo.removeAttribute('class');
+          logo.setAttribute('class', 'logo logo-black');
+          btn.setAttribute('class', 'btn')
+        }
+      })
+
+    };
+  </script>
+</head>
+<body>
+<div class="main">
+  <div class="logo" id="logo">前端学院</div>
+  <a class="btn" id="btn" href="javascript:;">切换样式</a>
+</div>
+</body>
+</html>
