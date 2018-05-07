@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body,div,nav,footer{
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /*头部*/
+    header {
+      background-color: rgb(51, 51, 51);
+      width: 100%;
+      height: 80px;
+      color: white;
+      position: relative;
+    }
+    .logo{
+      font-size: 27px;
+      line-height: 27px;
+      padding-top: 26px;
+      margin-left: 15.4%;
+    }
+    .nav{
+      position: absolute;
+      top: 0;
+      right: 13.3%;
+    }
+    .nav a{
+      float: left;
+      color: white;
+      margin: 10px;
+    }
+
+
+    /*banner*/
+
+    .banner{
+      height: 298px;
+      background-color: #66bb33;
+      position: relative;
+    }
+
+    .banner__num{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      width: 140px;
+      position: absolute;
+      bottom: 10px;
+      right: 13.3%;
+      display: flex;
+      align-items: flex-end;
+    }
+    .banner__num-item{
+      box-sizing: border-box;
+      width: 30px;
+      margin-right: 5px;
+      text-align: center;
+      line-height: 30px;
+      background-color: rgb(178,221,153);
+      height: 36px;
+      list-style: none;
+      border: 1px solid rgb(51,94,26);
+    }
+    .banner__num-item>a{
+      color: rgb(51,94,26);
+      text-decoration: none;
+    }
+    .banner__num-item:nth-of-type(2){
+      height: 50px;
+      background-color: rgb(224,241,214);
+      padding-top: 14px;
+    }
+
+    /*main*/
+    .main{
+      height: 648px;
+      position: relative;
+    }
+    .main__nav{
+      box-sizing: border-box;
+      height: 72px;
+      padding: 16px 0 0 15.4%;
+      font-size: 0;
+    }
+    .main__nav>a{
+      width: 106px;
+      height: 48px;
+      font-size: 14px;
+      display: inline-block;
+      line-height: 48px;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid rgb(204,204,204);
+      background: rgb(238,238,238);
+    }
+    .main__nav>a.active{
+      /*position: relative;*/
+      background-color: #fff;
+    }
+    .active::after{
+      content: '';
+      width: 100%;
+      border-top: 1px solid rgb(204,204,204);
+      position: absolute;
+      background-color: #fff;
+      z-index: 3;
+      height: 10px;
+      top:55px;
+      left: 0;
+    }
+    .main .content>.content__row{
+      padding: 12px 14.4% 20px  15.4%;
+
+    }
+    .main .content>.content__row>.col{
+      height: 184px;
+      display: flex;
+      /*justify-content: space-between;*/
+      flex-wrap: nowrap;
+    }
+    .main .content>.content__row>.col>div{
+      border: 1px solid rgb(204,204,204);
+      text-align: center;
+      box-sizing: border-box;
+      width: calc(33.33% - 10px);
+      margin: 0 10px 10px 0;
+      line-height: 174px;
+
+    }
+
+
+
+
+
+
+
+    /*footer*/
+    footer{
+      color: white;
+      background-color: #666666;
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 12px;
+      text-align: center;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+      Logo
+    </div>
+    <nav class="nav">
+      <a href="">Github</a>
+      <a href="">Register</a>
+      <a href="">Login</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <ul class="banner__num">
+      <li class="banner__num-item"><a href="">1</a></li>
+      <li class="banner__num-item"><a href="">2</a></li>
+      <li class="banner__num-item"><a href="">3</a></li>
+      <li class="banner__num-item"><a href="">4</a></li>
+    </ul>
+</section>
+
+<section class="main">
+  <div class="main__nav">
+    <a href="" class="active">HOME</a>
+    <a href="">PROFILE</a>
+    <a href="">ABOUT</a>
+  </div>
+  <div class="content">
+    <div class="content__row">
+      <div class="col">
+        <div>this is Content 1</div>
+        <div>Mybecontent 2</div>
+        <div>Content 3</div>
+      </div>
+      <div class="col">
+        <div>Content 4</div>
+        <div>Content 5</div>
+        <div>Content 6</div>
+        <div>Content 7</div>
+      </div>
+      <div class="col">
+        <div>Content 8</div>
+        <div>Content 9</div>
+        <div>Content 10</div>
+      </div>
+    </div>
+    <!--
+
+    <div class="content__row">
+      <div class="col">
+        <div>this is Content 1</div>
+        <div>Mybecontent 2</div>
+        <div>Content 3</div>
+      </div>
+      <div class="col">
+        <div>Content 4</div>
+        <div>Content 5</div>
+        <div>Content 6</div>
+        <div>Content 7</div>
+      </div>
+      <div class="col">
+        <div>Content 8</div>
+        <div>Content 9</div>
+        <div>Content 10</div>
+      </div>
+    </div>
+    <div class="content__row">
+      <div class="col">
+        <div>this is Content 1</div>
+        <div>Mybecontent 2</div>
+        <div>Content 3</div>
+      </div>
+      <div class="col">
+        <div>Content 4</div>
+        <div>Content 5</div>
+        <div>Content 6</div>
+        <div>Content 7</div>
+      </div>
+      <div class="col">
+        <div>Content 8</div>
+        <div>Content 9</div>
+        <div>Content 10</div>
+      </div>
+    </div>
+
+
+     -->
+  </div>
+</section>
+
+
+<footer>
+  &copy;2018 ife,baidu.com
+</footer>
+</body>
+</html>
